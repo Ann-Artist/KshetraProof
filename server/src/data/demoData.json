@@ -1,0 +1,829 @@
+{
+  "villages": [
+    {
+      "id": 1,
+      "villageId": "VIL-001",
+      "name": "Rampur",
+      "taluka": "Khed",
+      "district": "Nashik",
+      "state": "Maharashtra",
+      "center": [
+        20.1235,
+        73.1235
+      ],
+      "zoom": 17,
+      "totalParcels": 5,
+      "surveyedParcels": 4,
+      "verifiedParcels": 1,
+      "pendingParcels": 1,
+      "conflictParcels": 1,
+      "disputedParcels": 1,
+      "governmentParcels": 1
+    }
+  ],
+  "parcels": [
+    {
+      "id": 1,
+      "parcelId": "P-101",
+      "villageId": 1,
+      "surveyNumber": "101",
+      "subdivision": "1A",
+      "ulpin": "DEMO-ULPIN-101",
+      "ownerName": "Ramesh Kumar",
+      "fatherName": "Harishchandra Kumar",
+      "khataNumber": "KH-842",
+      "recordedArea": 2,
+      "measuredArea": 1.85,
+      "areaDifference": 0.15,
+      "percentDifference": 7.5,
+      "landType": "Agricultural (Irrigated)",
+      "cropType": "Sugarcane / Wheat",
+      "status": "field_visit",
+      "accuracyClass": "Simulated RTK (±0.03m)",
+      "lastSurveyDate": "2026-09-28T08:30:00Z",
+      "surveyor": "Sunil Varma (Surveyor #402)",
+      "oldGeometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.1225,
+              20.1225
+            ],
+            [
+              73.1245,
+              20.1225
+            ],
+            [
+              73.1245,
+              20.1245
+            ],
+            [
+              73.1225,
+              20.1245
+            ],
+            [
+              73.1225,
+              20.1225
+            ]
+          ]
+        ]
+      },
+      "proposedGeometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.1227,
+              20.1225
+            ],
+            [
+              73.1245,
+              20.1225
+            ],
+            [
+              73.1245,
+              20.1243
+            ],
+            [
+              73.1227,
+              20.1243
+            ],
+            [
+              73.1227,
+              20.1225
+            ]
+          ]
+        ]
+      },
+      "approvedGeometry": null
+    },
+    {
+      "id": 2,
+      "parcelId": "P-102",
+      "villageId": 1,
+      "surveyNumber": "102",
+      "subdivision": "0",
+      "ulpin": "DEMO-ULPIN-102",
+      "ownerName": "Savitri Devi",
+      "fatherName": "W/o Ramlal Sharma",
+      "khataNumber": "KH-319",
+      "recordedArea": 1.5,
+      "measuredArea": 1.5,
+      "areaDifference": 0,
+      "percentDifference": 0,
+      "landType": "Agricultural (Dryland)",
+      "cropType": "Mustard / Bajra",
+      "status": "verified",
+      "accuracyClass": "Simulated RTK (±0.02m)",
+      "lastSurveyDate": "2026-09-27T14:15:00Z",
+      "surveyor": "Sunil Varma (Surveyor #402)",
+      "oldGeometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.1245,
+              20.1225
+            ],
+            [
+              73.1265,
+              20.1225
+            ],
+            [
+              73.1265,
+              20.1245
+            ],
+            [
+              73.1245,
+              20.1245
+            ],
+            [
+              73.1245,
+              20.1225
+            ]
+          ]
+        ]
+      },
+      "proposedGeometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.1245,
+              20.1225
+            ],
+            [
+              73.1265,
+              20.1225
+            ],
+            [
+              73.1265,
+              20.1245
+            ],
+            [
+              73.1245,
+              20.1245
+            ],
+            [
+              73.1245,
+              20.1225
+            ]
+          ]
+        ]
+      },
+      "approvedGeometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.1245,
+              20.1225
+            ],
+            [
+              73.1265,
+              20.1225
+            ],
+            [
+              73.1265,
+              20.1245
+            ],
+            [
+              73.1245,
+              20.1245
+            ],
+            [
+              73.1245,
+              20.1225
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "parcelId": "P-103",
+      "villageId": 1,
+      "surveyNumber": "103",
+      "subdivision": "2B",
+      "ulpin": "DEMO-ULPIN-103",
+      "ownerName": "Balwant Singh",
+      "fatherName": "Gurdev Singh",
+      "khataNumber": "KH-512",
+      "recordedArea": 3.2,
+      "measuredArea": 3.18,
+      "areaDifference": 0.02,
+      "percentDifference": 0.6,
+      "landType": "Agricultural (Irrigated)",
+      "cropType": "Cotton / Gram",
+      "status": "pending",
+      "accuracyClass": "Simulated RTK (±0.03m)",
+      "lastSurveyDate": "2026-09-28T10:00:00Z",
+      "surveyor": "Sunil Varma (Surveyor #402)",
+      "oldGeometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.1225,
+              20.1245
+            ],
+            [
+              73.1255,
+              20.1245
+            ],
+            [
+              73.1255,
+              20.1265
+            ],
+            [
+              73.1225,
+              20.1265
+            ],
+            [
+              73.1225,
+              20.1245
+            ]
+          ]
+        ]
+      },
+      "proposedGeometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.1225,
+              20.1245
+            ],
+            [
+              73.1254,
+              20.1245
+            ],
+            [
+              73.1254,
+              20.1265
+            ],
+            [
+              73.1225,
+              20.1265
+            ],
+            [
+              73.1225,
+              20.1245
+            ]
+          ]
+        ]
+      },
+      "approvedGeometry": null
+    },
+    {
+      "id": 4,
+      "parcelId": "P-104",
+      "villageId": 1,
+      "surveyNumber": "104",
+      "subdivision": "1",
+      "ulpin": "DEMO-ULPIN-104",
+      "ownerName": "Suresh Kumar & Vijay Patil",
+      "fatherName": "Joint Ownership Record",
+      "khataNumber": "KH-109",
+      "recordedArea": 2.4,
+      "measuredArea": 2.25,
+      "areaDifference": 0.15,
+      "percentDifference": 6.25,
+      "landType": "Agricultural",
+      "cropType": "Soybean / Onion",
+      "status": "conflict",
+      "accuracyClass": "Simulated RTK (±0.04m)",
+      "lastSurveyDate": "2026-09-26T16:45:00Z",
+      "surveyor": "Sunil Varma (Surveyor #402)",
+      "oldGeometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.1255,
+              20.1245
+            ],
+            [
+              73.128,
+              20.1245
+            ],
+            [
+              73.128,
+              20.1265
+            ],
+            [
+              73.1255,
+              20.1265
+            ],
+            [
+              73.1255,
+              20.1245
+            ]
+          ]
+        ]
+      },
+      "proposedGeometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.1257,
+              20.1245
+            ],
+            [
+              73.128,
+              20.1245
+            ],
+            [
+              73.128,
+              20.1263
+            ],
+            [
+              73.1257,
+              20.1263
+            ],
+            [
+              73.1257,
+              20.1245
+            ]
+          ]
+        ]
+      },
+      "approvedGeometry": null
+    },
+    {
+      "id": 5,
+      "parcelId": "P-105",
+      "villageId": 1,
+      "surveyNumber": "105",
+      "subdivision": "G",
+      "ulpin": "DEMO-ULPIN-105",
+      "ownerName": "Gram Panchayat Rampur (Common Land)",
+      "fatherName": "State Government Land",
+      "khataNumber": "KH-001",
+      "recordedArea": 4.5,
+      "measuredArea": 4.5,
+      "areaDifference": 0,
+      "percentDifference": 0,
+      "landType": "Government / Grazing (Goyatan)",
+      "cropType": "Community Pasture / Canal Bund",
+      "status": "government",
+      "accuracyClass": "Drone Orthomosaic + RTK Boundary",
+      "lastSurveyDate": "2026-09-25T11:20:00Z",
+      "surveyor": "Sunil Varma (Surveyor #402)",
+      "oldGeometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.1225,
+              20.1265
+            ],
+            [
+              73.128,
+              20.1265
+            ],
+            [
+              73.128,
+              20.1285
+            ],
+            [
+              73.1225,
+              20.1285
+            ],
+            [
+              73.1225,
+              20.1265
+            ]
+          ]
+        ]
+      },
+      "proposedGeometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.1225,
+              20.1265
+            ],
+            [
+              73.128,
+              20.1265
+            ],
+            [
+              73.128,
+              20.1285
+            ],
+            [
+              73.1225,
+              20.1285
+            ],
+            [
+              73.1225,
+              20.1265
+            ]
+          ]
+        ]
+      },
+      "approvedGeometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.1225,
+              20.1265
+            ],
+            [
+              73.128,
+              20.1265
+            ],
+            [
+              73.128,
+              20.1285
+            ],
+            [
+              73.1225,
+              20.1285
+            ],
+            [
+              73.1225,
+              20.1265
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "boundaryPoints": [
+    {
+      "id": 1,
+      "parcelId": "P-101",
+      "pointCode": "A",
+      "markerId": "BM-101-A",
+      "latitude": 20.1225,
+      "longitude": 73.1227,
+      "elevation": 102.35,
+      "accuracy": 0.03,
+      "rtkStatus": "fixed",
+      "photoUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&auto=format&fit=crop&q=80",
+      "note": "South-West boundary pillar near main canal drainage bund.",
+      "capturedBy": "Sunil Varma (Surveyor #402)",
+      "capturedAt": "2026-09-28T08:45:00Z"
+    },
+    {
+      "id": 2,
+      "parcelId": "P-101",
+      "pointCode": "B",
+      "markerId": "BM-101-B",
+      "latitude": 20.1225,
+      "longitude": 73.1245,
+      "elevation": 102.8,
+      "accuracy": 0.02,
+      "rtkStatus": "fixed",
+      "photoUrl": "https://images.unsplash.com/photo-1592417817098-8f3d6eb231fc?w=600&auto=format&fit=crop&q=80",
+      "note": "South-East corner pillar adjoining Survey No. 102.",
+      "capturedBy": "Sunil Varma (Surveyor #402)",
+      "capturedAt": "2026-09-28T09:05:00Z"
+    },
+    {
+      "id": 3,
+      "parcelId": "P-101",
+      "pointCode": "C",
+      "markerId": "BM-101-C",
+      "latitude": 20.1243,
+      "longitude": 73.1245,
+      "elevation": 103.1,
+      "accuracy": 0.03,
+      "rtkStatus": "fixed",
+      "photoUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&auto=format&fit=crop&q=80",
+      "note": "North-East corner pillar adjoining Survey No. 103.",
+      "capturedBy": "Sunil Varma (Surveyor #402)",
+      "capturedAt": "2026-09-28T09:20:00Z"
+    },
+    {
+      "id": 4,
+      "parcelId": "P-101",
+      "pointCode": "D",
+      "markerId": "BM-101-D",
+      "latitude": 20.1243,
+      "longitude": 73.1227,
+      "elevation": 102.5,
+      "accuracy": 0.03,
+      "rtkStatus": "fixed",
+      "photoUrl": "https://images.unsplash.com/photo-1592417817098-8f3d6eb231fc?w=600&auto=format&fit=crop&q=80",
+      "note": "North-West boundary marker displaying 0.42m shift from old map line.",
+      "capturedBy": "Sunil Varma (Surveyor #402)",
+      "capturedAt": "2026-09-28T09:35:00Z"
+    },
+    {
+      "id": 5,
+      "parcelId": "P-101",
+      "pointCode": "E",
+      "markerId": "BM-101-E",
+      "latitude": 20.12385,
+      "longitude": 73.12345,
+      "elevation": 102.6,
+      "accuracy": 0.03,
+      "rtkStatus": "fixed",
+      "photoUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&auto=format&fit=crop&q=80",
+      "note": "Simulated RTK point captured near western bund edge",
+      "capturedBy": "Sunil Varma (Surveyor #402)",
+      "capturedAt": "2026-09-28T12:48:02.849Z"
+    },
+    {
+      "id": 6,
+      "parcelId": "P-101",
+      "pointCode": "E",
+      "markerId": "BM-101-E",
+      "latitude": 20.12395,
+      "longitude": 73.12409,
+      "elevation": 102.6,
+      "accuracy": 0.01,
+      "rtkStatus": "fixed",
+      "photoUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&auto=format&fit=crop&q=80",
+      "note": "RTK point captured near western bund edge with Smart Pole",
+      "capturedBy": "Sunil Varma",
+      "capturedAt": "2026-09-28T12:48:21.827Z"
+    },
+    {
+      "id": 7,
+      "parcelId": "P-101",
+      "pointCode": "F",
+      "markerId": "BM-101-F",
+      "latitude": 20.12395,
+      "longitude": 73.12409,
+      "elevation": 102.6,
+      "accuracy": 0.01,
+      "rtkStatus": "fixed",
+      "photoUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&auto=format&fit=crop&q=80",
+      "note": "RTK point captured near western bund edge with Smart Pole",
+      "capturedBy": "Sunil Varma",
+      "capturedAt": "2026-09-28T12:48:23.407Z"
+    }
+  ],
+  "evidence": [
+    {
+      "id": 1,
+      "parcelId": "P-101",
+      "markerId": "BM-101-A",
+      "type": "photo",
+      "title": "Boundary Marker BM-101-A Field Photo",
+      "url": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&auto=format&fit=crop&q=80",
+      "description": "Smart boundary pole placed at SW pillar. RTK fixed precision 0.03m.",
+      "uploadedBy": "Sunil Varma",
+      "timestamp": "2026-09-28T08:45:00Z"
+    },
+    {
+      "id": 2,
+      "parcelId": "P-101",
+      "markerId": "BM-101-D",
+      "type": "photo",
+      "title": "Encroachment Check & Bund Shift Photo",
+      "url": "https://images.unsplash.com/photo-1592417817098-8f3d6eb231fc?w=600&auto=format&fit=crop&q=80",
+      "description": "Visible old mud bund shifted 0.42 meters eastward due to tractor tilling.",
+      "uploadedBy": "Sunil Varma",
+      "timestamp": "2026-09-28T09:35:00Z"
+    },
+    {
+      "id": 3,
+      "parcelId": "P-101",
+      "markerId": "BM-101-E",
+      "type": "photo",
+      "title": "Boundary Point BM-101-E Photo",
+      "url": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&auto=format&fit=crop&q=80",
+      "description": "Simulated RTK point captured near western bund edge",
+      "uploadedBy": "Sunil Varma (Surveyor #402)",
+      "timestamp": "2026-09-28T12:48:02.849Z"
+    },
+    {
+      "id": 4,
+      "parcelId": "P-101",
+      "markerId": "BM-101-E",
+      "type": "photo",
+      "title": "Boundary Point BM-101-E Photo",
+      "url": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&auto=format&fit=crop&q=80",
+      "description": "RTK point captured near western bund edge with Smart Pole",
+      "uploadedBy": "Sunil Varma",
+      "timestamp": "2026-09-28T12:48:21.827Z"
+    },
+    {
+      "id": 5,
+      "parcelId": "P-101",
+      "markerId": "BM-101-F",
+      "type": "photo",
+      "title": "Boundary Point BM-101-F Photo",
+      "url": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&auto=format&fit=crop&q=80",
+      "description": "RTK point captured near western bund edge with Smart Pole",
+      "uploadedBy": "Sunil Varma",
+      "timestamp": "2026-09-28T12:48:23.407Z"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": 1,
+      "conflictId": "CONF-101-01",
+      "parcelId": "P-101",
+      "type": "area_mismatch",
+      "title": "Area Mismatch (7.5% Deficit)",
+      "recordedValue": 2,
+      "measuredValue": 1.85,
+      "difference": 0.15,
+      "unit": "acres",
+      "boundaryShiftMetres": 0.42,
+      "priority": "high",
+      "status": "open",
+      "recommendedAction": "Field verification required & Revenue Officer review",
+      "detectedAt": "2026-09-28T09:40:00Z"
+    },
+    {
+      "id": 2,
+      "conflictId": "CONF-104-01",
+      "parcelId": "P-104",
+      "type": "disputed_boundary",
+      "title": "Boundary Shift & Overlap Dispute",
+      "recordedValue": 2.4,
+      "measuredValue": 2.25,
+      "difference": 0.15,
+      "unit": "acres",
+      "boundaryShiftMetres": 0.65,
+      "priority": "high",
+      "status": "open",
+      "recommendedAction": "Joint survey with adjacent owner Suresh Kumar",
+      "detectedAt": "2026-09-26T17:00:00Z"
+    },
+    {
+      "id": 3,
+      "conflictId": "CONF-P-104-AUTO",
+      "parcelId": "P-104",
+      "type": "area_mismatch",
+      "title": "Area Mismatch (6.2% Difference)",
+      "recordedValue": 2.4,
+      "measuredValue": 2.25,
+      "difference": 0.15,
+      "unit": "acres",
+      "boundaryShiftMetres": 0.42,
+      "priority": "high",
+      "status": "open",
+      "recommendedAction": "Field verification required & Revenue Officer review",
+      "detectedAt": "2026-09-28T12:49:06.456Z"
+    }
+  ],
+  "objections": [
+    {
+      "id": 1,
+      "objectionId": "OBJ-001",
+      "parcelId": "P-101",
+      "objectorName": "Suresh Kumar",
+      "contact": "+91 98230 11223",
+      "type": "boundary_claim",
+      "description": "The proposed resurvey boundary on the Western edge cuts into 0.15 acres of my actively cultivated field (Survey 104). The old bund from 1985 has been moved by drone layout.",
+      "status": "submitted",
+      "submittedAt": "2026-09-28T11:15:00Z",
+      "documentUrl": null
+    },
+    {
+      "id": 2,
+      "objectionId": "OBJ-002",
+      "parcelId": "P-101",
+      "objectorName": "Suresh Kumar",
+      "contact": "+91 98230 11223",
+      "type": "boundary_claim",
+      "description": "The proposed boundary shift overlaps 0.15 acres of my cultivated field.",
+      "claimedBoundary": null,
+      "status": "submitted",
+      "submittedAt": "2026-09-28T12:48:02.855Z",
+      "documentUrl": null
+    }
+  ],
+  "parcelHistory": [
+    {
+      "id": 1,
+      "parcelId": "P-101",
+      "version": "v1.0",
+      "action": "Cadastral Map Digitized",
+      "actor": "System Admin",
+      "role": "admin",
+      "notes": "Original 7/12 record imported: 2.00 acres",
+      "timestamp": "2026-09-20T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "parcelId": "P-101",
+      "version": "v1.1",
+      "action": "Drone Orthomosaic Alignment",
+      "actor": "Sunil Varma",
+      "role": "surveyor",
+      "notes": "High-resolution drone image overlay aligned with CORS GNSS base.",
+      "timestamp": "2026-09-27T15:30:00Z"
+    },
+    {
+      "id": 3,
+      "parcelId": "P-101",
+      "version": "v2.0",
+      "action": "RTK Boundary Points Captured",
+      "actor": "Sunil Varma",
+      "role": "surveyor",
+      "notes": "Captured 4 RTK points (BM-101-A to D). Calculated area: 1.85 acres.",
+      "timestamp": "2026-09-28T09:40:00Z"
+    },
+    {
+      "id": 4,
+      "parcelId": "P-101",
+      "version": "v2.1",
+      "action": "Citizen Objection Filed",
+      "actor": "Suresh Kumar",
+      "role": "citizen",
+      "notes": "Objection OBJ-001 filed regarding 0.15 ac western boundary shift.",
+      "timestamp": "2026-09-28T11:15:00Z"
+    },
+    {
+      "id": 5,
+      "parcelId": "P-101",
+      "version": "v5.0",
+      "action": "Boundary Point Captured (BM-101-E)",
+      "actor": "Sunil Varma (Surveyor #402)",
+      "role": "surveyor",
+      "notes": "RTK Fixed reading (±0.03m accuracy) captured at Lat 20.12385, Lng 73.12345.",
+      "timestamp": "2026-09-28T12:48:02.849Z"
+    },
+    {
+      "id": 6,
+      "parcelId": "P-101",
+      "version": "v6.0",
+      "action": "Citizen Objection Submitted",
+      "actor": "Suresh Kumar",
+      "role": "citizen",
+      "notes": "Reference OBJ-002: The proposed boundary shift overlaps 0.15 acres of my cultivated field.",
+      "timestamp": "2026-09-28T12:48:02.855Z"
+    },
+    {
+      "id": 7,
+      "parcelId": "P-101",
+      "version": "v7.0",
+      "action": "Officer Decision: FIELD VISIT",
+      "actor": "Sunil Varma (Surveyor #402)",
+      "role": "surveyor",
+      "notes": "Dispatched senior surveyor team for CORS RTK re-verification of Western bund.",
+      "timestamp": "2026-09-28T12:48:02.859Z"
+    },
+    {
+      "id": 8,
+      "parcelId": "P-101",
+      "version": "v8.0",
+      "action": "Boundary Point Captured (BM-101-E)",
+      "actor": "Sunil Varma",
+      "role": "surveyor",
+      "notes": "RTK Fixed reading (±0.01m accuracy) captured at Lat 20.12395, Lng 73.12409.",
+      "timestamp": "2026-09-28T12:48:21.827Z"
+    },
+    {
+      "id": 9,
+      "parcelId": "P-101",
+      "version": "v9.0",
+      "action": "Boundary Point Captured (BM-101-F)",
+      "actor": "Sunil Varma",
+      "role": "surveyor",
+      "notes": "RTK Fixed reading (±0.01m accuracy) captured at Lat 20.12395, Lng 73.12409.",
+      "timestamp": "2026-09-28T12:48:23.407Z"
+    }
+  ],
+  "devices": [
+    {
+      "id": "DRONE-001",
+      "name": "Kshetra-Fly Quadcopter Drone",
+      "type": "drone",
+      "status": "ready",
+      "missionId": "M-001",
+      "battery": 86,
+      "network": "online",
+      "gnss": "fixed",
+      "imageCount": 128,
+      "orthomosaicUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&auto=format&fit=crop&q=80",
+      "lastSync": "2026-09-28T12:51:28.397Z",
+      "accuracy": "0.030"
+    },
+    {
+      "id": "SMART-POLE-001",
+      "name": "Smart Boundary Pole Rover 01",
+      "type": "rtk_rover",
+      "status": "connected",
+      "battery": 93,
+      "network": "offline",
+      "gnss": "fixed",
+      "accuracy": "0.033",
+      "lastSync": "2026-09-28T12:51:35.406Z"
+    },
+    {
+      "id": "CORS-BASE-01",
+      "name": "State CORS Reference Station Rampur",
+      "type": "cors_base",
+      "status": "active",
+      "battery": 82,
+      "network": "online",
+      "gnss": "fixed",
+      "accuracy": "0.035",
+      "lastSync": "2026-09-28T12:51:40.020Z"
+    }
+  ]
+}
