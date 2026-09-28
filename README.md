@@ -1,4 +1,4 @@
-# 🌾 KshetraProof (क्षेत्रप्रूफ़)
+# KshetraProof (क्षेत्रप्रूफ़)
 
 > **SIH26010: Software Control and Verification Layer for Hardware-Assisted Rural Agricultural Land Survey & Resurvey in India**
 
@@ -6,7 +6,7 @@ KshetraProof connects agricultural parcel maps, simulated field survey evidence 
 
 ---
 
-## 📌 Problem Statement
+## Problem Statement
 
 Many rural land records (7/12 extracts and old paper cadastral maps from 1985 or earlier) **do not match present ground conditions** because of:
 
@@ -21,7 +21,7 @@ These issues lead to land disputes, delayed revenue decisions, incorrect agricul
 
 ---
 
-## 💡 Proposed Solution & Innovation
+## Proposed Solution & Innovation
 
 KshetraProof is an **evidence-linked shared-boundary verification platform**.
 
@@ -43,7 +43,7 @@ The platform distinguishes **lawful changes** (inheritance, sale, partition, acq
 
 ---
 
-## 🚀 Prototype Features & Workflow
+## Prototype Features & Workflow
 
 ### 1. Resurvey Control Dashboard (`/dashboard`)
 - Overview stats: Total Parcels (5), Verified (1), Pending (1), Disputed (1), High-Priority Conflicts (2).
@@ -79,7 +79,7 @@ The platform distinguishes **lawful changes** (inheritance, sale, partition, acq
 
 ---
 
-## 🎬 Demonstration Flow
+## Demonstration Flow
 
 ```text
 Login (Surveyor) → Village Map → Inspect Parcel P-101
@@ -94,7 +94,7 @@ Login (Surveyor) → Village Map → Inspect Parcel P-101
 
 ---
 
-## 🔑 Demo Login Credentials
+## Demo Login Credentials
 
 You can log in or switch roles instantly using the top header pill:
 
@@ -107,7 +107,7 @@ You can log in or switch roles instantly using the top header pill:
 
 ---
 
-## ⚡ Quick Start & Installation
+## Quick Start & Installation
 
 ### Prerequisites
 - Node.js `v18+` or `v24+`
@@ -131,7 +131,7 @@ npm run dev
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Prototype Implementation
 - **Frontend**: React 18, Vite, Tailwind CSS ("Earth & Field" visual theme), React-Leaflet, Recharts, Lucide React, Axios.
@@ -144,7 +144,7 @@ npm run dev
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 KshetraProof/
@@ -173,7 +173,7 @@ KshetraProof/
 
 ---
 
-## 🌐 Core API Routes
+## Core API Routes
 
 ```http
 POST /api/auth/login                # Authenticate user and issue JWT
@@ -192,7 +192,7 @@ GET  /api/devices                    # Fetch hardware telemetry status
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 1. **Demonstration Data**: All village parcels, owner names, coordinates, and survey values are simulated for demonstration purposes.
 2. **Non-Legal Status**: The prototype demonstrates software workflows. It does not determine legal title ownership or update official state revenue records.
@@ -201,7 +201,7 @@ GET  /api/devices                    # Fetch hardware telemetry status
 
 ---
 
-## 📜 Summary
+## Summary
 
 ```text
 Measure → Compare → Explain → Verify → Decide → Preserve History
