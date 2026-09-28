@@ -1,171 +1,513 @@
-# 🌾 KshetraProof (क्षेत्रप्रूफ़)
+# KshetraProof
 
-> **SIH26010: Software Control and Verification Layer for Hardware-Assisted Rural Agricultural Land Survey & Resurvey in India.**
+## Evidence-Linked Agricultural Land Resurvey Platform
 
-KshetraProof connects agricultural parcel maps, simulated field survey evidence (drones, RTK/CORS GNSS, smart boundary poles, coded markers), area mismatch conflicts, citizen objections, officer reviews, and immutable version history into a unified digital workflow.
+KshetraProof is a prototype web application for SIH26010: **Survey/Resurvey of Rural Agricultural Land in India**.
 
----
+It demonstrates how drone mapping, RTK/CORS survey points, field evidence, GIS comparison, citizen objections, and officer review can work together to identify and document agricultural land-boundary changes.
 
-## 📌 Problem Overview
+> The prototype uses fictional records and simulated drone/RTK data. It does not determine legal ownership or update official government land records.
 
-In rural India, paper land records (7/12 extracts) and outdated cadastral maps (from 1985 or earlier) often **do not match present ground conditions** due to:
-- Inheritance & informal family land partitions.
-- Mud bund shifts caused by tractor tilling over decades.
-- Unrecorded land transactions & encroachment.
-- Mismatches between textual records (acres/hectares) and spatial map geometry.
+## Problem Statement
 
-**KshetraProof** provides a web-based proof-of-concept demonstrating how software acts as the control and verification bridge between on-ground survey hardware and official revenue decisions.
+Many rural land records are old or incomplete. The recorded map may not match the present condition on the ground because of:
 
----
+- Inheritance and informal family partition.
+- Registered sale or gift not reflected in updated records.
+- Unrecorded transactions.
+- Encroachment or shifted fences and field bunds.
+- Subdivision or merging of parcels.
+- Errors in old cadastral maps.
+- Missing or delayed mutation records.
+- Roads, canals, and government acquisition.
+- Differences between textual records and spatial maps.
+- Disputes between neighbouring landholders.
 
-## 🚀 Key Features
+These problems can cause land disputes, incorrect agricultural planning, delayed government services, and administrative inefficiency.
 
-1. **🌾 "Earth & Field" Aesthetic Design**:
-   - Custom palette tailored for land revenue: Deep forest shell (`#0F1F17`), warm parchment canvas (`#F7F4EC`), crop-green primary (`#6FA85A`), wheat-gold highlights (`#F2B632`), and soil/clay pastel cards.
-   - Topographic contour backgrounds, dashed survey lines, and tabular mono typography for coordinates and ULPIN IDs.
+## Proposed Solution
 
-2. **🗺️ Interactive Cadastral Map**:
-   - Leaflet/CARTO parchment map renderer comparing **Old 1985 Boundaries (Solid Blue Line)** vs **Proposed Resurvey Boundaries (Dashed Ink Line)**.
-   - Map Layer Switcher: Toggle between CARTO Parchment, Google Maps Road, Google Satellite (HD), and Esri Imagery.
-   - Floating parcel inspection card, RTK pillar markers, and map legend.
+KshetraProof is an evidence-linked land-survey and verification platform.
 
-3. **📍 Simulated RTK Boundary Point Capture**:
-   - Field-tablet interface displaying live hardware status (Smart Pole connected, RTK fixed ±0.03m, battery 78%, offline field mode).
-   - Capture boundary markers (`BM-101-A` to `E`), auto-tag GPS coordinates, attach field photos, and trigger real-time polygon updates.
+It compares:
 
-4. **⚠️ Automated Conflict Engine**:
-   - Scans village parcels for area mismatches (>5% threshold) and boundary shifts (>0.30m).
-   - Pre-loaded demonstration scenario on parcel **P-101** (Recorded **2.00 acres** vs Measured **1.85 acres** → 0.15 ac / 7.5% deficit).
+1. Old cadastral maps and land records.
+2. Current drone or aerial survey data.
+3. RTK/CORS ground points and field evidence.
+4. Current registration, mutation, ownership, and official change records.
 
-5. **📝 Public Citizen Objections Portal**:
-   - Allows farmers and neighboring landholders to file boundary claims, upload 7/12 receipts, and track reference numbers (`OBJ-001`).
+The system identifies whether a difference is likely to be:
 
-6. **⚖️ Revenue Officer Case Review**:
-   - Split-screen review desk with side-by-side spatial map overlays and evidence verification.
-   - 5 Officer Decision Actions with mandatory remarks:
-     - 🟢 **Approve Proposed Boundary**
-     - 🔵 **Request On-Ground Field Visit**
-     - 🔴 **Mark Disputed**
-     - ⚪ **Reject Proposed Change**
-     - ⚖️ **Refer to Revenue Legal Tribunal**
+- A lawful ownership transfer.
+- Inheritance or succession.
+- Partition or subdivision.
+- Parcel amalgamation.
+- Government acquisition.
+- Land-use conversion.
+- Approved survey correction.
+- Physical boundary discrepancy.
+- Possible encroachment.
+- Unresolved dispute.
 
-7. **📋 Printable Survey Sheet Report**:
-   - Printed-sheet design with Source Serif 4 typography, village title block grid, map snapshot, coordinate tables, rotated DEMO stamp, and verbatim legal disclaimer notice.
+The platform does not decide ownership automatically. It provides evidence and sends disputed cases to the authorized revenue authority for verification and decision.
 
-8. **📡 Hardware Fleet Telemetry**:
-   - Live telemetry status cards for survey drones (`M-001` quadcopter), RTK rovers, and CORS base stations.
+## Main Innovation
 
----
+The main innovation is an **evidence-linked shared-boundary verification workflow**.
 
-## 🎬 Main User Journey
+Every survey point, photo, marker, claimant statement, objection, map change, and officer decision is linked to the correct parcel and preserved in the parcel history.
 
-```text
-Login → Select Village → View Map → Inspect Parcel P-101
-  │
-  ├─▸ Capture RTK Point (BM-101-E, ±0.03m)
-  ├─▸ Conflict Engine Flagged (Area Deficit 7.5%)
-  ├─▸ File Citizen Objection (OBJ-001)
-  └─▸ Revenue Officer Review (Request Field Visit / Approve)
-        │
-        └─▸ Version History Updated (v1.0 → v7.0) → Generate Survey Sheet Report
-```
-
----
-
-## 🛠️ Technology Stack
-
-### Frontend (`/client`)
-- **Framework**: React 18 + Vite
-- **Styling**: Tailwind CSS (Custom "Earth & Field" tokens)
-- **Maps**: Leaflet & React-Leaflet (CARTO, Google Maps & Esri layers)
-- **Charts**: Recharts
-- **Icons**: Lucide React
-- **HTTP**: Axios & React Hook Form
-
-### Backend (`/server`)
-- **Runtime**: Node.js & Express.js
-- **Auth**: JWT & role-based middleware
-- **Uploads**: Multer (field photo evidence)
-- **Data Persistence**: In-memory JSON database (`demoData.json`)
-
----
-
-## 📁 Project Structure
+The system distinguishes between:
 
 ```text
-KshetraProof/
-├── client/                     # React + Vite Frontend
-│   ├── src/
-│   │   ├── components/         # Layout, Header, Sidebar, ParcelMap, DeviceStatus, etc.
-│   │   ├── context/            # AuthContext (Role Switcher & JWT state)
-│   │   ├── pages/              # Login, Dashboard, VillageMap, ParcelDetails, BoundaryCapture,
-│   │   │                       # Conflicts, Objections, OfficerReview, ParcelReport, Devices
-│   │   ├── services/           # Axios API services
-│   │   ├── index.css           # Tailwind & Warm Parchment map styles
-│   │   └── App.jsx             # React Router setup
-│   ├── index.html
-│   ├── tailwind.config.js
-│   ├── vite.config.js
-│   └── package.json
-├── server/                     # Node.js + Express REST API Server
-│   ├── src/
-│   │   ├── data/               # demoData.json (Rampur village 5 parcels dataset)
-│   │   └── server.js           # REST API routes & controllers
-│   ├── uploads/                # Evidence photos folder
-│   ├── .env
-│   └── package.json
-├── .gitignore
-└── README.md
+Physical change: What is visible on the ground?
+Legal change: What approved record explains the change?
+Final status: What has the authorized authority decided?
 ```
 
----
+A changed fence is not automatically treated as a legal boundary. A new owner is not inferred only from a drone image. The system keeps physical evidence and legal records separate and compares them transparently.
 
-## ⚡ Quick Start & Setup
+## How It Works
 
-### Prerequisites
-- Node.js `v18+` or `v24+`
-- npm `v9+` or `v11+`
-
-### 1. Backend API Server Setup
-```bash
-cd server
-npm install
-npm run dev
+```text
+Old maps and records
+        ↓
+Drone/aerial survey layer
+        ↓
+RTK/CORS ground points
+        ↓
+GIS map comparison
+        ↓
+Conflict and change detection
+        ↓
+Field evidence and both-party claims
+        ↓
+Citizen objection process
+        ↓
+Officer/revenue review
+        ↓
+Versioned parcel record and report
 ```
-*Server starts on `http://localhost:5000`*
 
-### 2. Frontend Client Setup
+## Example: Shared Boundary Dispute
+
+Assume Farmer A moves a fence into Farmer B's recorded land.
+
+KshetraProof will:
+
+1. Load the official old boundary.
+2. Display the current drone/aerial view.
+3. Capture RTK points along the shared boundary.
+4. Mark the current fence or field bund.
+5. Calculate the difference between the official line and physical line.
+6. Record statements from both landholders.
+7. Attach photos, marker IDs, and survey evidence.
+8. Mark the boundary as disputed if a party objects.
+9. Send the case to the authorized officer.
+10. Preserve the final decision and all previous versions.
+
+The system does not declare encroachment or ownership by itself.
+
+## Example: Lawful Inheritance
+
+If a parent dies and the land legally passes to heirs:
+
+```text
+Old record:       P-101 owned by Ramesh Kumar
+Approved change:  Ownership passes to two legal heirs
+Boundary:         Unchanged
+System result:    Ownership-history update
+```
+
+If the land is also legally partitioned:
+
+```text
+Old parcel:       P-101, 4 acres
+Approved change:  P-101A and P-101B, 2 acres each
+System result:    Parent parcel retained as history; child parcels created
+```
+
+## Prototype Features
+
+### Dashboard
+
+- Total villages.
+- Total parcels.
+- Verified parcels.
+- Pending parcels.
+- Disputed parcels.
+- High-priority conflicts.
+- Survey-progress chart.
+- Conflict-type chart.
+
+### Interactive Parcel Map
+
+- Parcel polygons.
+- Old cadastral boundary.
+- Proposed/current boundary.
+- Approved boundary.
+- RTK boundary points.
+- Boundary markers.
+- Roads and canals.
+- Disputed areas.
+- Parcel search and filters.
+
+### Parcel Details
+
+- Parcel ID.
+- Survey number.
+- ULPIN field.
+- Owner record.
+- Recorded area.
+- Measured area.
+- Land type.
+- Survey date.
+- Accuracy label.
+- Evidence files.
+- Objections.
+- Version history.
+
+### Hardware Simulation
+
+The prototype represents the proposed field hardware:
+
+- Survey drone.
+- RTK/CORS GNSS rover.
+- Smart boundary-verification pole.
+- Coded boundary markers.
+- Rugged field tablet.
+- Solar field-power kit.
+
+All prototype hardware values are simulated and labelled clearly.
+
+### Boundary-Point Capture
+
+A surveyor can simulate capturing:
+
+- Parcel ID.
+- Marker ID.
+- Boundary-point ID.
+- Latitude and longitude.
+- RTK status.
+- Accuracy.
+- Photo.
+- Note.
+- Capture time.
+
+### Conflict Detection
+
+The prototype can display:
+
+- Area mismatch.
+- Boundary shift.
+- Parcel overlap.
+- Missing parcel.
+- Owner-record mismatch.
+- Pending mutation.
+- Registration mismatch.
+- Disputed shared boundary.
+
+### Objection Management
+
+Citizens or landholders can submit:
+
+- Name and contact.
+- Parcel ID.
+- Objection type.
+- Boundary claim.
+- Description.
+- Supporting image or document.
+
+### Officer Review
+
+An authorized officer can review:
+
+- Old map.
+- Current proposed boundary.
+- RTK points.
+- Evidence photographs.
+- Ownership records.
+- Mutation and registration status.
+- Objections.
+- Surveyor notes.
+
+Possible actions:
+
+- Approve proposed boundary.
+- Request field verification.
+- Mark parcel disputed.
+- Reject proposed change.
+- Refer to legal process.
+
+Every decision creates a history record.
+
+### Parcel Report
+
+The report includes:
+
+- Parcel identity.
+- Survey number.
+- Owner record.
+- Recorded and measured area.
+- Boundary points.
+- Evidence count.
+- Objection count.
+- Accuracy class.
+- Current status.
+- Version history.
+- Legal disclaimer.
+
+## Proposed Hardware
+
+The production concept includes:
+
+### Survey drone
+
+Captures high-resolution aerial imagery of the village and agricultural land.
+
+### RTK/CORS GNSS rover
+
+Measures ground-control points, parcel corners, and disputed boundary points.
+
+### Smart survey pole
+
+Combines a GNSS receiver, camera, marker scanner, push button, battery, and Bluetooth connection to the field tablet.
+
+### Boundary markers
+
+Reflective or QR-coded markers identify important parcel corners and shared-boundary points.
+
+### Field tablet
+
+Provides offline maps, evidence collection, parcel search, and objection forms.
+
+### Solar field kit
+
+Provides portable power for the tablet, GNSS rover, and communication devices.
+
+## Technical Architecture
+
+```text
+React Web Application
+          ↓
+Node.js + Express REST API
+          ↓
+JSON/SQLite for prototype
+or PostgreSQL + PostGIS for production
+          ↓
+Parcel, geometry, evidence, conflict,
+objection, device, and history data
+```
+
+### Frontend
+
+- React.
+- Vite.
+- React Router.
+- Tailwind CSS.
+- React-Leaflet.
+- Axios.
+- React Hook Form.
+- Recharts.
+- Lucide React.
+
+### Backend
+
+- Node.js.
+- Express.js.
+- JWT authentication.
+- bcrypt.
+- Multer.
+- Zod or Joi.
+- dotenv.
+- CORS.
+
+### Data and GIS
+
+- JSON or SQLite for the basic prototype.
+- PostgreSQL/PostGIS for production spatial data.
+- GeoJSON for map display.
+- Object storage for photos, documents, and drone imagery.
+
+## Project Structure
+
+```text
+kshetraproof/
+├── client/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── context/
+│   │   ├── data/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
+├── server/
+│   ├── src/
+│   │   ├── routes/
+│   │   ├── controllers/
+│   │   ├── services/
+│   │   ├── middleware/
+│   │   ├── data/
+│   │   └── server.js
+│   ├── uploads/
+│   └── package.json
+├── README.md
+└── IMPLEMENTATION.md
+```
+
+## Main API Routes
+
+```http
+POST /api/auth/login
+GET  /api/villages
+GET  /api/parcels
+GET  /api/parcels/:id
+GET  /api/parcels/:id/geojson
+GET  /api/parcels/:id/history
+POST /api/parcels/:id/points
+POST /api/evidence/upload
+GET  /api/parcels/:id/evidence
+GET  /api/conflicts
+POST /api/conflicts/run-analysis
+POST /api/objections
+PUT  /api/objections/:id/status
+GET  /api/reviews/pending
+POST /api/reviews/:parcelId/decision
+GET  /api/devices
+POST /api/devices/:id/telemetry
+```
+
+## Demo Data
+
+Use a fictional village called `Rampur` with five parcels.
+
+Main parcel:
+
+```text
+Parcel ID: P-101
+Survey number: 101
+Owner: Ramesh Kumar
+Recorded area: 2.00 acres
+Measured area: 1.85 acres
+Difference: 0.15 acres
+Status: Boundary conflict
+```
+
+Use additional parcels to demonstrate verified, pending, disputed, and boundary-shift statuses.
+
+## Quick Start
+
+### Client
+
 ```bash
 cd client
 npm install
 npm run dev
 ```
-*Client starts on `http://localhost:5173`*
 
----
+### Server
 
-## 🔑 Demo Login Credentials
+```bash
+cd server
+npm install
+npm run dev
+```
 
-You can log in or switch roles instantly using the top header pill:
+### Suggested dependencies
 
-| Role | Email | Password | Primary Actions |
-|---|---|---|---|
-| **Field Surveyor** | `surveyor@demo.com` | `demo123` | Capture RTK points, attach evidence, view map |
-| **Revenue Officer** | `officer@demo.com` | `demo123` | Review conflicts, approve/dispute boundaries, generate report |
-| **System Admin** | `admin@demo.com` | `demo123` | Manage village settings & device telemetry |
-| **Landholder / Citizen** | `citizen@demo.com` | `demo123` | View draft parcel info & submit objections |
+```bash
+# Client
+npm install react-router-dom axios leaflet react-leaflet react-hook-form recharts lucide-react
 
----
+# Server
+npm install express cors dotenv bcrypt jsonwebtoken multer zod
+```
 
-## ⚠️ Important Disclaimers
+## Demonstration Flow
 
-1. **Demonstration Data**: All village parcels, owner names, coordinates, and survey values are simulated for demonstration purposes.
-2. **Non-Legal Status**: The prototype demonstrates software workflows. It does not determine legal title ownership or update official state revenue records.
-3. **Legal Disclaimer Notice** (as displayed on generated reports):
-   > *"This is a survey and verification report for demonstration purposes. It is not a legal title certificate and does not replace an official revenue-department decision."*
+Use this sequence in the demo video:
 
----
+1. Login as a surveyor.
+2. Open the Rampur dashboard.
+3. Open the village map.
+4. Select Parcel P-101.
+5. Compare the old and current boundary.
+6. Open the hardware-status panel.
+7. Show simulated RTK rover status.
+8. Capture boundary marker BM-101-A.
+9. Attach a sample evidence photo.
+10. Show the area or boundary conflict.
+11. Submit a citizen objection.
+12. Switch to the officer role.
+13. Review the map and evidence.
+14. Select `Request field verification` or `Mark disputed`.
+15. Show the parcel history.
+16. Generate the parcel report.
 
-## 📜 License & Acknowledgments
+## Accuracy and Legal Disclaimer
 
-Developed as a software prototype for **SIH26010: Resurvey of Rural Agricultural Land in India**.
+The prototype uses fictional records and simulated drone/RTK values.
+
+It does not:
+
+- Determine legal ownership.
+- Declare encroachment.
+- Issue a title certificate.
+- Update official land records.
+- Replace a revenue officer or court.
+- Claim real survey accuracy.
+
+The production system would require authorized government data access, compliant drone operations, approved survey procedures, official verification, and applicable state legal processes.
+
+## Security and Privacy
+
+The production system should include:
+
+- Role-based access.
+- Secure authentication.
+- Encrypted communication.
+- Private evidence storage.
+- File validation.
+- Audit logs.
+- Versioned parcel records.
+- Limited public exposure of personal information.
+- Officer-only approval actions.
+
+No real personal or land documents should be used in the prototype.
+
+## Future Scope
+
+- Real RTK rover integration through Bluetooth or serial.
+- CORS/NTRIP correction support.
+- Survey-grade drone import.
+- Orthomosaic and point-cloud processing.
+- PostGIS geometry analysis.
+- Offline Android field application.
+- QR/NFC marker scanning.
+- Official RoR, registration, mutation, and court-record integration.
+- ULPIN linkage through approved systems.
+- Public verification portal.
+- Digital signatures and audit trails.
+- Precision-agriculture layers.
+
+## Expected Impact
+
+KshetraProof can help make rural agricultural land management more:
+
+- Accurate.
+- Transparent.
+- Evidence-based.
+- Easier to verify.
+- Better connected to current records.
+- Safer for shared-boundary disputes.
+- More useful for agricultural planning.
+
+## Project Summary
+
+KshetraProof is not just a drone map. It is an evidence-linked land-resurvey workflow that connects physical survey data, official change records, landholder objections, officer review, and historical parcel versions.
+
+```text
+Measure → Compare → Explain → Verify → Decide → Preserve history
+```
