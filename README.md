@@ -114,13 +114,6 @@ KshetraProof/
 │   ├── uploads/                # Evidence photos folder
 │   ├── .env
 │   └── package.json
-├── 01_PRD.md                   # Product Requirements Document
-├── 02_Technical_Architecture.md# Technical Architecture Spec
-├── 03_Security_and_Access.md   # Security & Access Spec
-├── 04_Feature_Ticket_List.md   # Feature Checklist
-├── 05_Frontend_Spec.md         # Frontend UI Specification
-├── design.md                   # Visual Design System Tokens ("Earth & Field")
-├── implementation.md           # Technical Implementation Guide
 ├── .gitignore
 └── README.md
 ```
